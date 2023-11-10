@@ -1,0 +1,33 @@
+import java.lang.Boolean;
+
+CREATE TABLE photoEntity (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    url TEXT NOT NULL,
+    photographer TEXT NOT NULL,
+    isFavorite  INTEGER AS Boolean DEFAULT 0 NOT NULL
+);
+
+getAllPhotos:
+SELECT * FROM photoEntity;
+
+getPhotoById:
+SELECT *
+FROM photoEntity
+WHERE id = ?;
+
+insertPhoto:
+INSERT OR REPLACE
+INTO photoEntity(
+    id,
+    url,
+    photographer,
+    isFavorite
+) VALUES (?,?,?,?);
+
+clearTable:
+DELETE FROM photoEntity;
+
+getAllFavorites:
+SELECT *
+FROM photoEntity
+WHERE isFavorite = ?;

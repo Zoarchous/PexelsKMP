@@ -1,6 +1,6 @@
 [versions]
 agp = "8.0.0"
-org-jetbrains-kotlin-android = "1.8.22"
+org-jetbrains-kotlin-android = "1.9.20"
 core-ktx = "1.12.0"
 coil-compose = "2.2.2"
 junit = "4.13.2"
@@ -13,8 +13,7 @@ kotlinx-coroutines = "1.7.3"
 kotlinx-datetime = "0.4.1"
 kotlinx-serialization = "1.5.1"
 ktor = "2.3.5"
-paging = "3.2.1"
-paging-compose = "3.3.0-alpha02"
+paging-compose = "3.3.0-alpha02-0.4.0"
 sql-delight = "2.0.0"
 hilt-android = "2.48"
 hilt-androidx = "1.1.0"
@@ -45,8 +44,8 @@ hilt-kapt-android-compiler = { module = "com.google.dagger:hilt-android-compiler
 hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-androidx" }
 hilt-kapt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hilt-androidx" }
 desugaring = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugaring" }
-paging-runtime = { module = "androidx.paging:paging-runtime-ktx", version.ref = "paging" }
-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "paging-compose" }
+paging-common = { module = "app.cash.paging:paging-common", version.ref = "paging-compose" }
+paging-compose = { module = "app.cash.paging:paging-compose-common", version.ref = "paging-compose" }
 sql-delight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sql-delight" }
 sql-delight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sql-delight" }
 sql-delight-native-driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sql-delight" }

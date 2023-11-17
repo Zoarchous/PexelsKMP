@@ -4,11 +4,12 @@ import com.innowise.pexelskmp.data.cloud.core.HttpKtorClient
 import com.innowise.pexelskmp.data.cloud.core.getResult
 import com.innowise.pexelskmp.data.cloud.photos.dto.PhotoDto
 import com.innowise.pexelskmp.data.cloud.photos.dto.PhotosResponse
+import com.innowise.pexelskmp.domain.photo.remote.PhotosApi
 import io.ktor.client.*
 import io.ktor.http.*
 
-class PhotosApi(private val client: HttpClient) {
-    suspend fun getCuratedPhotos(): Result<PhotosResponse> = client
+class PhotosApiImpl(private val client: HttpClient): PhotosApi {
+    override suspend fun getCuratedPhotos(): Result<PhotosResponse> = client
         .getResult {
             url {
                 path("${HttpKtorClient.API_V1}/curated")
@@ -17,14 +18,14 @@ class PhotosApi(private val client: HttpClient) {
             }
         }
 
-    suspend fun getPhotoById(id: Int): Result<PhotoDto> = client
+    override suspend fun getPhotoById(id: Int): Result<PhotoDto> = client
         .getResult {
             url {
                 path("${HttpKtorClient.API_V1}/photos/${path("$id")}")
             }
         }
 
-    suspend fun getPhotosByQuery(query: String): Result<PhotosResponse> = client
+    override suspend fun getPhotosByQuery(query: String): Result<PhotosResponse> = client
         .getResult {
             url {
                 path("${HttpKtorClient.API_V1}/search")

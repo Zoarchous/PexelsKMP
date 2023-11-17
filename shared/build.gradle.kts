@@ -38,7 +38,7 @@ kotlin {
                 implementation(libs.ktor.client.logging)
                 implementation(libs.ktor.serialization.kotlinx.json)
                 implementation(libs.essenty.parcelable)
-                implementation(libs.paging.runtime)
+                implementation(libs.paging.common)
                 implementation(libs.paging.compose)
             }
         }
@@ -53,7 +53,6 @@ kotlin {
                 implementation(libs.sql.delight.android.driver)
             }
         }
-
         val iosMain by getting {
             dependencies {
                 implementation(libs.sql.delight.native.driver)

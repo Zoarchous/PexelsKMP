@@ -1,4 +1,4 @@
-import java.lang.Boolean;
+import kotlin.Boolean;
 
 CREATE TABLE photoEntity (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,

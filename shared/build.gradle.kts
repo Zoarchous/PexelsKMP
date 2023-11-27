@@ -57,6 +57,7 @@ kotlin {
             dependencies {
                 implementation(libs.sql.delight.native.driver)
                 implementation(libs.ktor.client.darwin)
+                implementation(libs.paging.runtime.uikit)
             }
         }
     }

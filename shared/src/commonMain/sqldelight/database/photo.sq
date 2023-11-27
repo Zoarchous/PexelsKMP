@@ -30,4 +30,4 @@ DELETE FROM photoEntity;
 getAllFavorites:
 SELECT *
 FROM photoEntity
-WHERE isFavorite = ?;
+WHERE isFavorite = 1;

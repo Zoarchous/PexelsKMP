@@ -46,6 +46,7 @@ hilt-kapt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hi
 desugaring = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugaring" }
 paging-common = { module = "app.cash.paging:paging-common", version.ref = "paging-compose" }
 paging-compose = { module = "app.cash.paging:paging-compose-common", version.ref = "paging-compose" }
+paging-runtime-uikit = { module = "app.cash.paging:paging-runtime-uikit", version.ref = "paging-compose" }
 sql-delight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sql-delight" }
 sql-delight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sql-delight" }
 sql-delight-native-driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sql-delight" }

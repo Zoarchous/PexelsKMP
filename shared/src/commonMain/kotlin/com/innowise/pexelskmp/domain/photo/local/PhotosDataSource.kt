@@ -7,9 +7,9 @@ interface PhotosDataSource {
     suspend fun insertPhoto(photo: Photo)
     suspend fun getAllPhotos(): List<Photo>
 
-    suspend fun getPhotoById(id: Int): Photo
+    suspend fun getPhotoById(id: Long): Photo
 
     suspend fun cleatPhotos()
 
-    suspend fun getAllFavorites(isFavorite: Boolean): List<Photo>
+    suspend fun getAllFavorites(): List<Photo>
 }

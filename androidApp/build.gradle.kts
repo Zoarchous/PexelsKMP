@@ -56,4 +56,7 @@ dependencies {
     kapt(libs.hilt.kapt.android.compiler)
     kapt(libs.hilt.kapt.compiler)
     implementation(libs.hilt.navigation.compose)
+    implementation(libs.ktor.client.core)
+    implementation(libs.paging.common)
+    implementation(libs.paging.compose)
 }

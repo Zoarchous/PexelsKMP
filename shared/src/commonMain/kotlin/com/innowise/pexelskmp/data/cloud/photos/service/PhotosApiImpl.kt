@@ -2,6 +2,7 @@ package com.innowise.pexelskmp.data.cloud.photos.service
 
 import com.innowise.pexelskmp.data.cloud.core.HttpKtorClient
 import com.innowise.pexelskmp.data.cloud.core.getResult
+import com.innowise.pexelskmp.data.cloud.photos.dto.CollectionsResponse
 import com.innowise.pexelskmp.data.cloud.photos.dto.PaginationResponse
 import com.innowise.pexelskmp.data.cloud.photos.dto.PhotoDto
 import com.innowise.pexelskmp.data.cloud.photos.dto.PhotosResponse
@@ -33,6 +34,14 @@ class PhotosApiImpl(private val client: HttpClient) : PhotosApi {
             url {
                 path("${HttpKtorClient.API_V1}/search")
                 parameters.append(QUERY, query)
+                parameters.append(PER_PAGE, perPage)
+            }
+        }
+
+    override suspend fun getFeaturedCollections(perPage: String): Result<CollectionsResponse> = client
+        .getResult {
+            url {
+                path("${HttpKtorClient.API_V1}/collections/featured")
                 parameters.append(PER_PAGE, perPage)
             }
         }

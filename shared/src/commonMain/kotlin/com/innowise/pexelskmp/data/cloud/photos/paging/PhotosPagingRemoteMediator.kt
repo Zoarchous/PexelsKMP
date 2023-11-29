@@ -2,7 +2,7 @@ package com.innowise.pexelskmp.data.cloud.photos.paging
 
 import androidx.paging.PagingState
 import app.cash.paging.PagingSource
-import com.innowise.pexelskmp.data.core.mapFromDto
+import com.innowise.pexelskmp.data.core.mapFromDtoList
 import com.innowise.pexelskmp.domain.photo.local.PhotosDataSource
 import com.innowise.pexelskmp.domain.photo.model.Photo
 import com.innowise.pexelskmp.domain.photo.remote.PhotosApi
@@ -23,7 +23,7 @@ class PhotosPagingRemoteMediator(
             val photos = photosApi.getCuratedPhotos(position.toString(), params.loadSize.toString())
                 .getOrThrow()
                 .photos
-                .mapFromDto()
+                .mapFromDtoList()
             photos.forEach {
                 photosDb.insertPhoto(it)
             }

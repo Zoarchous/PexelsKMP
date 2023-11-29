@@ -1,4 +1,4 @@
-package com.innowise.pexelskmp.android.photo_list
+package com.innowise.pexelskmp.android.photo_list.photo
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

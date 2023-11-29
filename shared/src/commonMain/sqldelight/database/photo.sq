@@ -7,6 +7,11 @@ CREATE TABLE photoEntity (
     isFavorite  INTEGER AS Boolean DEFAULT 0 NOT NULL
 );
 
+CREATE TABLE collectionEntity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL
+);
+
 getAllPhotos:
 SELECT * FROM photoEntity;
 
@@ -31,3 +36,16 @@ getAllFavorites:
 SELECT *
 FROM photoEntity
 WHERE isFavorite = 1;
+
+getAllCollections:
+SELECT * FROM collectionEntity;
+
+insertCollection:
+INSERT OR REPLACE
+INTO collectionEntity(
+    id,
+    title
+) VALUES (?,?);
+
+clearCollectionsTable:
+DELETE FROM collectionEntity;

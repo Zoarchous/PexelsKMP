@@ -18,6 +18,6 @@ fun PhotoDto.toPhoto(): Photo = Photo(
     isFavorite = false
 )
 
-fun List<PhotoEntity>.mapFromEntity(): List<Photo> = map { it.toPhoto() }
+fun List<PhotoEntity>.mapFromEntityList(): List<Photo> = map { it.toPhoto() }
 
-fun List<PhotoDto>.mapFromDto(): List<Photo> = map { it.toPhoto() }
+fun List<PhotoDto>.mapFromDtoList(): List<Photo> = map { it.toPhoto() }
